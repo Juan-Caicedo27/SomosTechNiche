@@ -1,0 +1,293 @@
+body {
+    text-align: center;  
+    margin: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+table{
+    width: 100%;
+    
+}
+.primero {
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    border-radius: 40 px;
+}
+.primero img{
+    border-radius: 10%;
+    width: 25vw;
+    height: auto;
+}
+#categoria{
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(38, 38, 184);
+    border: 2px solid rgb(21, 21, 128); 
+    border-radius: 50px;
+    color: white;
+}
+.container {
+    display: flex; /* Define el contenedor como flexbox */
+}
+
+.left, .right {
+    flex: 1; /* Ambas secciones ocupan el mismo espacio */
+    padding: 20px;
+}
+
+.left {
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
+}
+
+.right {
+    background-color: white;
+}
+h1{
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+b{
+    font-weight: normal;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(38, 38, 184);
+}
+video{
+    width: 35vw;
+    height: auto;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+}
+#header{
+    background-color: black;
+    margin: auto;
+    width: 100%;
+    text-align: center ;
+    position: relative;
+}
+ul,li{
+    list-style: none;
+
+
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0%;
+    width: 100%;
+}
+.nav> li {
+    position: relative ;
+}
+.nav li a{
+    background-color: black;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+   
+}
+.nav li a:hover{
+    background-color: brown;
+}
+.nav > li {
+    float: left;
+    }
+
+
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    top: 100%;
+    left: 0;
+    background-color: black;
+
+
+}
+.nav li:hover>ul{
+    display: block;
+}
+div.bloque1{
+    background-color: #87d194; /*Clolor de fondo del bloque 1*/
+    width: 5px; /*Ancho del proque 1*/
+    height: 10px; /*Alto del bloque*/
+    top: 10px; /*Distancia desde la parte superior de la ventana*/
+    left: 100px; /*Distancia desde la parte izquierdo de la ventana*/
+    z-index: 800; /*Aplica el borde 1 sobre otros elementos (nivel de aplicamiento alto)*/
+    position: relative;
+
+}
+div.bloque1 img{
+    border-radius: 60%;
+    width: 8vw;
+    height: auto;
+}
+
+div.bloque2{
+    background-color: #87d194; /*Clolor de fondo del bloque 1*/
+    width: 5px; /*Ancho del proque 1*/
+    height: 10px; /*Alto del bloque*/
+    top: 0px; /*Distancia desde la parte superior de la ventana*/
+    left: 950px; /*Distancia desde la parte izquierdo de la ventana*/
+    z-index: 800; /*Aplica el borde 1 sobre otros elementos (nivel de aplicamiento alto)*/
+    position: relative;
+
+}
+div.bloque2 img{
+    border-radius: 60%;
+    width: 8vw;
+    height: auto;
+}
+.contenedor {
+    display: flex; /* Define el contenedor como flexbox */
+
+}
+
+.izquierda, .derecha {
+    flex: 1; /* Ambas secciones ocupan el mismo espacio */
+    padding: 20px;
+}
+
+.izquierda {
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
+}
+
+.derecha {
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
+}
+.contenedor h3{
+    text-align: center;
+    color: rgb(130, 130, 236);
+    padding: 10px;
+}
+h2{
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+#uno img{
+
+    width: 36vw;
+    height: auto;
+    object-position: center;
+    border: 5px solid #000;
+}
+.short{
+    color: rgb(130, 130, 236);
+    padding: 10px;
+}
+#titulo1{
+    background-color: rgb(130, 130, 236);
+}
+#dos img{
+
+    width: 36vw;
+    height: auto;
+    object-position: center;
+    border: 5px solid #000;
+}
+
+/* QUIENES SOMOS CODIGO */
+
+/* Estilos para el video de fondo */
+#videoFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*cubre todo el fondo sin deformarse */
+    z-index: -1; /*  video al fondo */
+}
+
+
+/* Estilos para el contenido */
+.contenido {
+    position: relative;
+    z-index: 1; /* texto esté sobre el video */
+    color: white; /* Color del texto para que sea visible sobre el video */
+    text-align: center;
+    padding: 50px;
+   
+   
+}
+.vision , .mision , .Objetivos {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.856); /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 10px;
+}
+.vision{
+    width: 300px;/*ancho del bloque*/
+    height: 390px;/*alto del bloque*/
+    top: 100px;
+    left: 0px;
+    padding: 2% 2%;
+
+
+}
+.mision{
+    width: 300px;/*ancho del bloque*/
+    height: 390px;/*alto del bloque*/
+    top: 100px;
+    left: 820px;
+    padding: 2% 2%;
+}
+.Objetivos{
+    width: 350px;/*ancho del bloque*/
+    height: 390px;/*alto del bloque*/
+    top: 100px;
+    left: 380px;
+    padding: 2% 2%;
+}
+
+/*PAGUINA DE CONTACTO*/
+
+#titcontacto{
+    background-color: rgb(170, 101, 213);
+}
+.contact{
+    text-align: justify;
+    padding: 170px;
+    padding-top: 50px;
+}
+.contact h4{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: rgb(89, 53, 112);
+}
+.contact li{
+    padding-left:200px;
+    padding-right: 200px;
+}
+.contact img{
+    width: 16vw;
+    height: auto;
+    padding-left:40px;
+    padding-right: 40px;
+}
+.contact td{
+    padding-left:40px;
+    padding-right: 40px;
+    background-color: rgb(214, 139, 180);
+}
+.datos{
+    padding-left:1px;
+    padding-right: 1px;
+}
+.datos img{
+    width: 1.5vw;
+    height: auto;
+}

@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* diseño menu */
+
+#header{
+    background-color: black;
+    margin: auto;
+    width: 100%;
+    text-align: center ;
+    position: relative;
+}
+ul,li{
+    list-style: none;
+
+
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0%;
+    width: 100%;
+}
+.nav> li {
+    position: relative ;
+}
+.nav li a{
+    background-color: black;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+   
+}
+.nav li a:hover{
+    background-color: brown;
+}
+.nav > li {
+    float: left;
+    }
+
+
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    top: 100%;
+    left: 0;
+    background-color: black;
+
+
+}
+.nav li:hover>ul{
+    display: block;
+}
+div.bloque1{
+    background-color: #87d194; /*Clolor de fondo del bloque 1*/
+    width: 5px; /*Ancho del proque 1*/
+    height: 10px; /*Alto del bloque*/
+    top: 10px; /*Distancia desde la parte superior de la ventana*/
+    left: 100px; /*Distancia desde la parte izquierdo de la ventana*/
+    z-index: 800; /*Aplica el borde 1 sobre otros elementos (nivel de aplicamiento alto)*/
+    position: relative;
+
+}
+div.bloque1 img{
+    border-radius: 60%;
+    width: 8vw;
+    height: auto;
+}
+
+div.bloque2{
+    background-color: #c2730ce7; /*Clolor de fondo del bloque 1*/
+    width: 5px; /*Ancho del proque 1*/
+    height: 10px; /*Alto del bloque*/
+    top: 0px; /*Distancia desde la parte superior de la ventana*/
+    left: 950px; /*Distancia desde la parte izquierdo de la ventana*/
+    z-index: 800; /*Aplica el borde 1 sobre otros elementos (nivel de aplicamiento alto)*/
+    position: relative;
+
+}
+div.bloque2 img{
+    border-radius: 60%;
+    width: 8vw;
+    height: auto;
+}
+.contenedor {
+    display: flex; /* Define el contenedor como flexbox */
+
+}
+
+.izquierda, .derecha {
+    flex: 1; /* Ambas secciones ocupan el mismo espacio */
+    padding: 20px;
+}
+
+.izquierda {
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
+}
+
+.derecha {
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
+}
+.contenedor h3{
+    text-align: center;
+    color: rgb(130, 130, 236);
+    padding: 10px;
+}
+h2{
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+#uno img{
+
+    width: 36vw;
+    height: auto;
+    object-position: center;
+    border: 5px solid #000;
+}
+.short{
+    color: rgb(130, 130, 236);
+    padding: 10px;
+}
+#titulo1{
+    background-color: rgb(130, 130, 236);
+}
+#dos img{
+
+    width: 36vw;
+    height: auto;
+    object-position: center;
+    border: 5px solid #000;
+}
+h1{
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
