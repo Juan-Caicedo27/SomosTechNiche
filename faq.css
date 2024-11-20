@@ -1,242 +1,211 @@
-*{
-    padding: 0%;
-    margin: 0%;
+ Estilo general
+* {
+    padding: 0%; 
+    margin: 0%; 
 }
+
+
 body {
-    
-    text-align: center;
-    margin: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    text-align: center; 
+    margin: 50px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Fuente principal */
     background-color: #f4f4f4;
-    
 }
-/*_titulo*/
-h1{
-    font-size: 80px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+
+
+h1 {
+    font-size: 80px; /* Tamaño de fuente*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Fuente  */
+    text-align: center; 
 }
-b{
-    font-weight: normal;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(38, 38, 184);
+
+/* Texto en negrita  */
+b {
+    font-weight: normal; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Fuente */
+    color: rgb(38, 38, 184); 
 }
+
 
 .contenedor {
-    display: flex; /* Define el contenedor como flexbox */
-
+    display: flex; /* Activa el modelo de caja flexible */
 }
 
-/* diseño menu */
-
+/* Diseño de menú */
 .bloque1, .bloque2 {
-    position: absolute;
-    top: 30px;
-    width: 8vw;
-    height: auto;
+    position: absolute; 
+    top: 30px; 
+    width: 8vw; 
+    height: auto; 
 }
+
 
 .bloque1 {
-    left: 180px;
+    left: 180px; 
 }
 
 .bloque2 {
-    right: 180px;
+    right: 180px; 
 }
 
+/* Estilo de las imágenes  */
 .bloque1 img, .bloque2 img {
     width: 100%;
-    height: auto;
-    border-radius: 50%;
+    height: auto;  
+    border-radius: 50%;  
 }
 
+ 
 #header {
-    background-color: #000000;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
+    background-color: #000000;  
+    padding: 10px 0; /* Relleno vertical */ 
+    position: relative;  
+    width: 100%;  
 }
 
-/* Estilo para la lista de navegación */
+/* Lista de navegación */
 .nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    list-style: none; /* Sin viñetas */
+    margin: 0; 
+    padding: 0;  
+    display: flex; /*  elementos horizontalmente */
+    justify-content: center;  
+    flex-wrap: wrap; /* Permite que los elementos ocupen varias líneas si es necesario */
 }
 
+/* Elementos de la lista */
 .nav > li {
-    position: relative;
+    position: relative; /* Relativo para submenús */
 }
 
+/* Enlaces en la navegación */
 .nav > li a {
-    display: block;
-    padding: 0px 20px;
-    color: #fff;
-    text-decoration: none;
-    background-color: #000000;
-    transition: background-color 0.3s;
+    display: block;  
+    padding: 0px 20px; /* Relleno interno horizontal */
+    color: #fff;  
+    text-decoration: none; /* Elimina el subrayado */
+    background-color: #000000; /* Fondo negro */
+    transition: background-color 0.3s; /* Transición suave al pasar el mouse */
 }
 
+/* Hover para enlaces */
 .nav > li a:hover {
-    background-color: #da1212;
+    background-color: #da1212; /* Fondo rojo al pasar el mouse */
 }
 
 /* Submenú */
 .nav li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #444;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
+    display: none; /* Oculta al inicio */
+    position: absolute; 
+    top: 100%;  
+    left: 0;  
+    background-color: #444;  
+    min-width: 160px;  
+    list-style: none;  
+    padding: 0; 
 }
 
+/* Muestra el submenú al pasar el mouse */
 .nav li:hover > ul {
-    display: block;
+    display: block; 
 }
 
+/* Estilo de elementos en el submenú */
 .nav li ul li {
-    width: 100%;
+    width: 100%;  
 }
 
 .nav li ul li a {
-    padding: 5px;
-    color: #fff;
-    background-color: #444;
+    padding: 5px;  
+    color: #fff; 
+    background-color: #444;  
 }
 
+ 
 .nav li ul li a:hover {
-    background-color: #da1212;
+    background-color: #da1212;  
 }
 
-/* Estilo responsivo */
+/* Estilo responsivo para pantallas medianas */
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /*  orientación a vertical */
+        align-items: center;  
     }
 
     .nav > li {
-        width: 100%;
-        text-align: center;
+        width: 100%;  
+        text-align: center;  
     }
 
     .nav li ul {
-        position: static;
+        position: static;  
     }
 }
 
+/* Estilo responsivo para pantallas pequeñas */
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Reduce tamaño del título */
     }
 
     .nav > li a {
-        padding: 8px 10px;
+        padding: 8px 10px; /* Reduce el relleno */
     }
 
     .bloque1, .bloque2 {
-        top: 5px;
-        width: 30px;
+        top: 5px;  
+        width: 30px;  
     }
 }
 
-/**/
-/**/
-
+/*   preguntas frecuentes   */
 .faq {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaciado inferior */
 }
 
 .faq input[type="checkbox"] {
-    display: none;  /* para poder darle clic en la barra y no en un cuadro */
+    display: none; /* Oculta el cuadro de selección */
 }
 
+/* Preguntas */
 .faq-question {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    display: block; 
+    font-size: 18px;  
+    font-weight: bold;  
+    background-color: #007BFF;  
+    color: #fff;  
+    padding: 10px;  
+    cursor: pointer; /* Cambia el cursor  */
+    border-radius: 5px;  
+    transition: background-color 0.3s ease; /* Transición   */
 }
 
 .faq-question:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
 }
 
+/* Respuestas */
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #f9f9f9;
-    padding: 0 10px;
-    border-left: 4px solid #007BFF;
-    border-radius: 0 0 5px 5px;
+    max-height: 0; /* Oculta inicialmente */
+    overflow: hidden; /* Oculta contenido excedente */
+    transition: max-height 0.3s ease;  
+    background-color: #f9f9f9;   
+    padding: 0 10px; /* Espaciado horizontal */
+    border-left: 4px solid #007BFF;  
+    border-radius: 0 0 5px 5px;  
 }
 
 .faq input:checked ~ .faq-answer {
-    max-height: 200px; /* Ajustar según la longitud de la respuesta */
-    padding: 10px;
+    max-height: 200px;  
+    padding: 10px;  
 }
 
 .faq-answer p {
-    margin: 0;
+    margin: 0; 
 }
-
+ 
 h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.faq {
-    margin-bottom: 15px;
-}
-
-.faq input[type="checkbox"] {
-    display: none;  /* para poder darle clic en la barra y no en un cuadro */
-}
-
-.faq-question {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-    background-color: #0056b3;
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #f9f9f9;
-    padding: 0 10px;
-    border-left: 4px solid #007BFF;
-    border-radius: 0 0 5px 5px;
-}
-
-.faq input:checked ~ .faq-answer {
-    max-height: 200px; /* Ajustar según la longitud de la respuesta */
-    padding: 10px;
-}
-
-.faq-answer p {
-    margin: 0;
+    text-align: center;  
+    margin-bottom: 30px; /* Espaciado inferior */
 }
