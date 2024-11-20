@@ -334,14 +334,21 @@ h2{
     height: auto;
 }
 /*reloj*/
+/* estilo reloj */
 .clock { display: flex; 
-justify-content: center; 
-align-items: center; 
-color: white; 
-font-size: 48px; 
-font-weight: bold; 
-background-color: #20232a; 
-padding: 20px; 
-border-radius: 10px; 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-size: 25px; 
+    font-weight: bold; 
+    background-color: #20232a; 
+    padding: 15px; 
+    border-radius: 10px; 
+
+    position: absolute;
+    top: 20px;
+    width: 8vw;
+    height: auto;
+    right: 35px;
+  
+    }
