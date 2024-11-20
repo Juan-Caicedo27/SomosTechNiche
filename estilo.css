@@ -4,6 +4,20 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
+/* reloj */
+
+.clock { display: flex; 
+        justify-content: center; 
+        align-items: center;
+        color: white;
+        font-size: 48px; 
+        font-weight: bold;
+        background-color: #20232a; 
+        padding: 20px;
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 table{
     width: 100%;
     
