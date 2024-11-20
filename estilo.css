@@ -246,39 +246,39 @@ h2{
 /* Estilos para el contenido */
 .contenido {
     position: relative;
-    z-index: 1; /* texto esté sobre el video */
-    color: white; /* Color del texto para que sea visible sobre el video */
-    text-align: center;
-    padding: 50px;
-   
+    color: black; /* Color del texto para que sea visible sobre  */
+    text-align: justify;
+    padding: 350px;;
+    display: flex;
+    justify-content: space-around; /* Espacio uniforme entre los bloques */
+    align-items: flex-start; /* Alineación vertical al inicio */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas si no hay espacio suficiente */
+    overflow: auto;
    
 }
 .vision , .mision , .Objetivos {
     position: absolute;
-    background: rgba(0, 0, 0, 0.856); /* Fondo semi-transparente para mejorar la legibilidad */
+    background: #007BFF ; /* Fondo */
     border-radius: 10px;
+    overflow: auto;
+    width: 300px;
+    height: 440px;
+    top: 100px;
 }
 .vision{
-    width: 300px;/*ancho del bloque*/
-    height: 390px;/*alto del bloque*/
-    top: 100px;
-    left: 0px;
+    
+    left: 2%;
     padding: 2% 2%;
 
 
 }
 .mision{
-    width: 300px;/*ancho del bloque*/
-    height: 390px;/*alto del bloque*/
-    top: 100px;
-    left: 820px;
+    right : 2%;
     padding: 2% 2%;
 }
 .Objetivos{
     width: 350px;/*ancho del bloque*/
-    height: 390px;/*alto del bloque*/
-    top: 100px;
-    left: 380px;
+    left: 33.3%;
     padding: 2% 2%;
 }
 
