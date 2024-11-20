@@ -4,10 +4,11 @@
     margin: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
+body { 
+    text-align: center;
+    margin: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
 }
 
 
@@ -50,92 +51,143 @@ button:hover {
 
 /* diseño menu */
 
-#header{
-    background-color: black;
-    margin: auto;
-    width: 100%;
-    text-align: center ;
-    position: relative;
+/*_titulo*/
+h1{
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
-ul,li{
-    list-style: none;
-
-
-}
-.nav{
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0%;
-    width: 100%;
-}
-.nav> li {
-    position: relative ;
-}
-.nav li a{
-    background-color: black;
-    color: aliceblue;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-   
-}
-.nav li a:hover{
-    background-color: brown;
-}
-.nav > li {
-    float: left;
-    }
-
-
-.nav li ul{
-    display: none;
-    position: absolute;
-    min-width: 140px;
-    top: 100%;
-    left: 0;
-    background-color: black;
-
-
-}
-.nav li:hover>ul{
-    display: block;
-}
-div.bloque1{
-    background-color: #87d194; /*Clolor de fondo del bloque 1*/
-    width: 5px; /*Ancho del proque 1*/
-    height: 10px; /*Alto del bloque*/
-    top: 10px; /*Distancia desde la parte superior de la ventana*/
-    left: 100px; /*Distancia desde la parte izquierdo de la ventana*/
-    z-index: 800; /*Aplica el borde 1 sobre otros elementos (nivel de aplicamiento alto)*/
-    position: relative;
-
-}
-div.bloque1 img{
-    border-radius: 60%;
-    width: 8vw;
-    height: auto;
+b{
+    font-weight: normal;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(38, 38, 184);
 }
 
-div.bloque2{
-    background-color: #c2730ce7; /*Clolor de fondo del bloque 1*/
-    width: 5px; /*Ancho del proque 1*/
-    height: 10px; /*Alto del bloque*/
-    top: 0px; /*Distancia desde la parte superior de la ventana*/
-    left: 950px; /*Distancia desde la parte izquierdo de la ventana*/
-    z-index: 800; /*Aplica el borde 1 sobre otros elementos (nivel de aplicamiento alto)*/
-    position: relative;
-
-}
-div.bloque2 img{
-    border-radius: 60%;
-    width: 8vw;
-    height: auto;
-}
 .contenedor {
     display: flex; /* Define el contenedor como flexbox */
 
 }
+
+/* diseño menu */
+
+.bloque1, .bloque2 {
+    position: absolute;
+    top: 30px;
+    width: 8vw;
+    height: auto;
+}
+
+.bloque1 {
+    left: 180px;
+}
+
+.bloque2 {
+    right: 180px;
+}
+
+.bloque1 img, .bloque2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#header {
+    background-color: #000000;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo para la lista de navegación */
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav > li {
+    position: relative;
+}
+
+.nav > li a {
+    display: block;
+    padding: 0px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000000;
+    transition: background-color 0.3s;
+}
+
+.nav > li a:hover {
+    background-color: #da1212;
+}
+
+/* Submenú */
+.nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
+
+.nav li ul li {
+    width: 100%;
+}
+
+.nav li ul li a {
+    padding: 5px;
+    color: #fff;
+    background-color: #444;
+}
+
+.nav li ul li a:hover {
+    background-color: #da1212;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav li ul {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .nav > li a {
+        padding: 8px 10px;
+    }
+
+    .bloque1, .bloque2 {
+        top: 5px;
+        width: 30px;
+    }
+}
+
+/**/
 
 .izquierda, .derecha {
     flex: 1; /* Ambas secciones ocupan el mismo espacio */
