@@ -1,69 +1,65 @@
 body {
-    text-align: center;  /* Centra el texto dentro del cuerpo de la página */
-    margin: 50px;  /* margen externo  */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Fuente de texto */
+    text-align: center;  
+    margin: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+/* reloj */
+
+.clock { display: flex; 
+        justify-content: center; 
+        align-items: center;
+        color: white;
+        font-size: 48px; 
+        font-weight: bold;
+        background-color: #20232a; 
+        padding: 20px;
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Reloj */
-.clock {
-    display: flex;  /* Usa flexbox para organizar los elementos dentro del reloj */
-    justify-content: center;  /* Centra  horizontalmente */
-    align-items: center;  /* Centra verticalmente */
-    color: white;  
-    font-size: 48px;  
-    font-weight: bold;  /* Texto en negrita */
-    background-color: #20232a;  /* Fondo oscuro */
-    padding: 20px;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del reloj */
+table{
+    width: 100%;
+    
 }
-
-table {
-    width: 100%; 
-}
-
 .primero {
-    background-repeat: no-repeat;  /* Evita que la imagen de fondo se repita */
+    background-repeat: no-repeat;
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    border-radius: 40px;  /* Bordes redondeados */
+    border-radius: 40 px;
 }
-
-.primero img {
-    border-radius: 10%;  
-    width: 25vw; 
-    height: auto;  
+.primero img{
+    border-radius: 10%;
+    width: 25vw;
+    height: auto;
 }
-
-
-#categoria {
-    font-size: 50px;  /* Tamaño del texto grande */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Estilo de fuente */
-    text-align: center;  /* Centra el texto */
-    font-weight: bold;  /*  negrita */
-    background-color: rgb(38, 38, 184); 
+#categoria{
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(38, 38, 184);
     border: 2px solid rgb(21, 21, 128); 
-    border-radius: 50px; 
-    color: white;  
+    border-radius: 50px;
+    color: white;
 }
-
 .container {
-    display: flex; /* Usa flexbox r */
+    display: flex; /* Define el contenedor como flexbox */
 }
 
 .left, .right {
     flex: 1; /* Ambas secciones ocupan el mismo espacio */
-    padding: 20px; 
+    padding: 20px;
 }
 
 .left {
-    background-color: white; 
-    text-align: justify; /* Alineación  del texto */
-    margin: 30px; 
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
 }
 
 .right {
     background-color: white;
 }
-
 h1{
     font-size: 80px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -73,305 +69,289 @@ b{
     font-weight: normal;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(38, 38, 184);
-
-video {
-    width: 35vw; 
-    height: auto; 
 }
-
-* {
-    padding: 0%; /* Elimina el relleno */
-    margin: 0%; /* Elimina los márgenes */
+video{
+    width: 35vw;
+    height: auto;
+}
+*{
+    padding: 0%;
+    margin: 0%;
 }
 
 .contenedor {
     display: flex; /* Define el contenedor como flexbox */
 
 }
-
+/**/
 .bloque1, .bloque2 {
-    position: absolute; 
-    top: 30px; /* Distancia desde la parte superior */
-    width: 8vw; 
-    height: auto; 
+    position: absolute;
+    top: 30px;
+    width: 8vw;
+    height: auto;
 }
 
 .bloque1 {
-    left: 180px; 
+    left: 180px;
 }
 
 .bloque2 {
-    right: 180px; 
+    right: 180px;
 }
 
 .bloque1 img, .bloque2 img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 50%; /* Convierte las imágenes en círculos */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 #header {
-    background-color: #000000; 
-    padding: 10px 0; 
-    position: relative; 
-    width: 100%; 
+    background-color: #000000;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
 }
 
-/*  lista de navegación */
+/* Estilo para la lista de navegación */
 .nav {
-    list-style: none; /* Elimina las viñetas  */
-    margin: 0; 
-    padding: 0;  
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav > li {
-    position: relative; /* submenús */
+    position: relative;
 }
 
 .nav > li a {
-    display: block; /* Los enlaces se comportan como bloques */
-    padding: 0px 20px; /* Espaciado interno en los enlaces */
-    color: #fff; 
-    text-decoration: none; /* Elimina el subrayado */
-    background-color: #000000; 
-    transition: background-color 0.3s; /* Transición para el cambio de color */
+    display: block;
+    padding: 0px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000000;
+    transition: background-color 0.3s;
 }
 
 .nav > li a:hover {
-    background-color: #da1212; /* al pasar el mouse */
+    background-color: #da1212;
 }
 
 /* Submenú */
 .nav li ul {
-    display: none; /* Oculta inicialmente los submenús */
-    position: absolute; 
-    top: 100%; /* Aparece justo debajo del enlace principal */
-    left: 0; 
-    background-color: #444; 
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
     min-width: 160px;
-    list-style: none; /* Sin viñetas */
-    padding: 0; 
+    list-style: none;
+    padding: 0;
 }
 
-.nav li: hover > ul {
-    display: block; /* Muestra el submenú al pasar el mouse */
+.nav li:hover > ul {
+    display: block;
 }
 
 .nav li ul li {
-    width: 100%; 
+    width: 100%;
 }
 
 .nav li ul li a {
-    padding: 5px; /* Espaciado interno */
-    color: #fff; 
+    padding: 5px;
+    color: #fff;
     background-color: #444;
 }
 
 .nav li ul li a:hover {
-    background-color: #da1212; /* al pasar el mouse */
+    background-color: #da1212;
 }
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column; /* Cambia la orientación de la navegación a vertical */
-        align-items: center; /* Centra  verticalmente */
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav > li {
-        width: 100%; 
-        text-align: center; 
+        width: 100%;
+        text-align: center;
     }
 
     .nav li ul {
-        position: static; 
+        position: static;
     }
-} 
+}
 
-/*   pantallas con un ancho máximo de 480px */
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8em;  
+        font-size: 1.8em;
     }
 
     .nav > li a {
-        padding: 8px 10px;  
+        padding: 8px 10px;
     }
 
     .bloque1, .bloque2 {
-        top: 5px;  
-        width: 30px;  
+        top: 5px;
+        width: 30px;
     }
 }
 
-/* Estilos generales para las secciones izquierda y derecha */
+/**/
+
 .izquierda, .derecha {
-    flex: 1; /*   mismo espacio */
-    padding: 20px; 
+    flex: 1; /* Ambas secciones ocupan el mismo espacio */
+    padding: 20px;
 }
 
 .izquierda {
-    background-color: white;  
-    text-align: justify; 
-    margin: 30px;  
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
 }
 
 .derecha {
-    background-color: white;  
-    text-align: justify;  
-    margin: 30px;  
-
-/*   encabezados dentro del contenedor */
-.contenedor h3 {
-    text-align: center;  
+    background-color: white;
+    text-align: justify;
+    margin: 30px;
+}
+.contenedor h3{
+    text-align: center;
     color: rgb(130, 130, 236);
-    padding: 10px;  
+    padding: 10px;
+}
+h2{
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+#uno img{
+
+    width: 36vw;
+    height: auto;
+    object-position: center;
+    border: 5px solid #000;
+}
+.short{
+    color: rgb(130, 130, 236);
+    padding: 10px;
+}
+#titulo1{
+    background-color: rgb(130, 130, 236);
+}
+#dos img{
+
+    width: 36vw;
+    height: auto;
+    object-position: center;
+    border: 5px solid #000;
 }
 
- 
-h2 {
-    font-size: 50px;  
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*  fuentes */
-    text-align: center; 
-}
+/* QUIENES SOMOS CODIGO */
 
-/*  imagen dentro del elemento con id "uno" */
-#uno img {
-    width: 36vw; /* Ancho   al viewport */
-    height: auto; /* Altura automática */
-    object-position: center;  
-    border: 5px solid #000;  
-}
 
- 
-.short {
-    color: rgb(130, 130, 236);  
-    padding: 10px;  
-}
 
- 
-#titulo1 {
-    background-color: rgb(130, 130, 236);  
-}
-
-/*   imagen dentro del elemento con id "dos" */
-#dos img {
-    width: 36vw;  
-    height: auto;  
-    object-position: center; /* Posición del objeto centrada */
-    border: 5px solid #000;  
-}
-
-/* Estilos para la sección "QUIENES SOMOS" */
-
+/* Estilos para el contenido */
 .contenido {
-    position: relative;  
-    z-index: 1; /* Asegura que el texto esté sobre el video */
-    color: white;  
-    text-align: center;  
-    padding: 50px;  
+    position: relative;
+    z-index: 1; /* texto esté sobre el video */
+    color: white; /* Color del texto para que sea visible sobre el video */
+    text-align: center;
+    padding: 50px;
+   
+   
+}
+.vision , .mision , .Objetivos {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.856); /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 10px;
+}
+.vision{
+    width: 300px;/*ancho del bloque*/
+    height: 390px;/*alto del bloque*/
+    top: 100px;
+    left: 0px;
+    padding: 2% 2%;
+
+
+}
+.mision{
+    width: 300px;/*ancho del bloque*/
+    height: 390px;/*alto del bloque*/
+    top: 100px;
+    left: 820px;
+    padding: 2% 2%;
+}
+.Objetivos{
+    width: 350px;/*ancho del bloque*/
+    height: 390px;/*alto del bloque*/
+    top: 100px;
+    left: 380px;
+    padding: 2% 2%;
 }
 
- 
-.vision, .mision, .Objetivos {
-    position: absolute;  
-    background: rgba(0, 0, 0, 0.856); 
-    border-radius: 10px;  
+/*PAGUINA DE CONTACTO*/
+
+#titcontacto{
+    background-color: rgb(170, 101, 213);
 }
-
-.vision {
-    width: 300px;  
-    height: 390px;  
-    top: 100px; /* Posición superior */
-    left: 0px;  
-    padding: 2% 2%;  
+.contact{
+    text-align: justify;
+    padding: 170px;
+    padding-top: 50px;
 }
-
-.mision {
-    width: 300px;  
-    height: 390px;  
-    top: 100px; /* Posición superior */
-    left: 820px;  
-    padding: 2% 2%;  
+.contact h4{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: rgb(89, 53, 112);
 }
-
-.Objetivos {
-    width: 350px;  
-    height: 390px;  
-    top: 100px;  
-    left: 380px;  
-    padding: 2% 2%; 
+.contact li{
+    padding-left:200px;
+    padding-right: 200px;
 }
-
-/*  página de contacto */
-
-#titcontacto {
-    background-color: rgb(170, 101, 213);  
+.contact img{
+    width: 16vw;
+    height: auto;
+    padding-left:40px;
+    padding-right: 40px;
 }
-
-.contact {
-    text-align: justify;  
-    padding: 170px; 
-    padding-top: 50px;  
+.contact td{
+    padding-left:40px;
+    padding-right: 40px;
+    background-color: rgb(214, 139, 180);
 }
-
-.contact h4 {
-    padding-top: 30px; /* Padding superior */
-    padding-bottom: 30px; /* Padding inferior */
-    text-align: center; /* Centra el texto */
-    color: rgb(89, 53, 112); /* Color del texto */
+.datos{
+    padding-left:1px;
+    padding-right: 1px;
 }
-
-.contact li {
-    padding-left: 200px; /* Padding izquierdo */
-    padding-right: 200px; /* Padding derecho */
+.datos img{
+    width: 1.5vw;
+    height: auto;
 }
+/*reloj*/
+/* estilo reloj */
+.clock { display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-size: 25px; 
+    font-weight: bold; 
+    background-color: #20232a; 
+    padding: 15px; 
+    border-radius: 10px; 
 
-.contact img {
-    width: 16vw;  
-    height: auto; /* Altura automática */
-    padding-left: 40px; 
-    padding-right: 40px;  
-
-.contact td {
-    padding-left: 40px;  
-    padding-right: 40px;  
-    background-color: rgb(214, 139, 180);  
-}
-
-.datos {
-    padding-left: 1px; /* Padding izquierdo */
-    padding-right: 1px; /* Padding derecho */
-}
-
-.datos img {
-    width: 1.5vw; /* Ancho relativo al viewport */
-    height: auto; /* Altura automática */
-}
-
-/* reloj */
-.clock {
-    display: flex; /* Flexbox para centrar */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    color: white;  
-    font-size: 25px;  
-    font-weight: bold; /* Negrita */
-    background-color: #20232a;  
-    padding: 15px;  
-    border-radius: 10px; /* Bordes redondeados */
-}
-
-
-/* Reloj*/
-
-.clock {  
-  position: absolute;  
-    top: 20px;  
-    width: 8vw;  
-    height: auto;  
-    right: 35px; 
-}
+    
+  
+    }
+.clock{ 
+    position: absolute;
+    top: 20px;
+    width: 8vw;
+    height: auto;
+    right: 35px;
+     }
