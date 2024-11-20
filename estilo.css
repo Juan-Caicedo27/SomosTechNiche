@@ -412,3 +412,53 @@ h2{
     .prev:focus, .next:focus {
         outline: 2px solid #fff; /* Mejora de accesibilidad */
     }
+
+/*diseno del footer*/
+
+.pie-pagina{
+    width: 100%;
+    background-color: rgb(34, 34, 68);
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: azure;
+
+}
+.pie-pagina .grupo-1 .box p{
+    color: rgb(219, 221, 221);
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.pie-pagina .grupo-1 .redsocial a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 150px;
+}
+
+.pie-pagina .grupo-1 .redsocial a img{
+    margin-top: 20px;
+    width: 30px;
+}
+.clase-2{
+    color:azure;
+}
