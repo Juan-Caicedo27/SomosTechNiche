@@ -30,6 +30,9 @@ table{
     border-radius: 50px;
     color: white;
 }
+
+/*Seccion de foto y texto del index*/
+
 .container {
     display: flex; /* Define el contenedor como flexbox */
 }
@@ -62,6 +65,9 @@ video{
     width: 35vw;
     height: auto;
 }
+
+/* Seccion del menu*/
+
 *{
     padding: 0%;
     margin: 0%;
@@ -191,6 +197,7 @@ video{
 
 /**/
 
+/* Seccion de las categorias8/
 .izquierda, .derecha {
     flex: 1; /* Ambas secciones ocupan el mismo espacio */
     padding: 20px;
@@ -321,6 +328,7 @@ h2{
     width: 1.5vw;
     height: auto;
 }
+
 /*reloj*/
 /* estilo reloj */
 .clock { display: flex; 
