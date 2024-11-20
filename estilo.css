@@ -345,10 +345,13 @@ h2{
     padding: 15px; 
     border-radius: 10px; 
 
+    
+  
+    }
+.clock{ 
     position: absolute;
     top: 20px;
     width: 8vw;
     height: auto;
     right: 35px;
-  
-    }
+     }
