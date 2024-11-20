@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Juan Caicedo </title>
+        <style>
+            /* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 50px;
+}
+img{
+    float:left; 
+        border: 5px solid rgba(18, 207, 78, 0.581);
+        margin: 30px;
+         width: 140px;
+        
+}
+
+
+/* Encabezado */
+header {
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4CAF50;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Imagen de perfil */
+.profile-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-box img {
+    border-radius: 50%;
+    border: 4px solid #4CAF50;
+    width: 150px;
+    height: 150px;
+}
+
+/* Sección de contacto */
+.contacto, .perfil, .expe, .refe, .estudios {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.contacto ul, .expe ul, .refe ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.contacto li, .expe li, .refe li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.contacto{
+    margin-left: 190px;
+}
+/* Títulos de secciones */
+h3 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Perfil */
+.perfil p {
+    line-height: 1.7;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Estudios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+table td {
+    font-size: 14px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos de cajas (modo cajas) */
+.box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+        <header> 
+            <h1> Juan Fernando Caicedo Cortes</h1>
+        </header>
+        <img src="fotoperfil.jpg" alt="fotoperfil" >
+        <div class="contacto ">
+            <h3> datos personales </h3>
+            <li>CC: 1025526423 </li>
+            <li> Kr 89 bis # 59-04 sur Bosa La Libertad, Bogotá </li>
+            <li> TEL: 3015818607 – 315 3653324 </li>
+            <li> caice.fercho@gmail.com</li>
+        </div>
+        <div class="perfil">
+            <h3> Perfil </h3>
+            <p> Técnico en contabilización de operaciones comerciales y financieras
+                Capacitado en verificar, seleccionar, reconocer y medir actividades económicas relacionadas con
+                movimientos comerciales y financieros. Me relaciono bien con las personas, tengo habilidades para
+                trabajar en equipo e individual, me gusta liderar, soy comprometido, responsable, honesto,
+                resolutivo y puntual, para sacar adelante mis deberes y cumplir adecuadamente mis funciones</p>
+
+        </div>
+        <hr>
+        <table> 
+            <h3> estudios </h3>
+            <tbody>
+            <tr>
+                <th>Básica primaria: <br>Colegio Santiago De Las Atalayas <br>
+                    Ciudad: BOGOTA D.C <br>
+                    Año de inicio: 2011 - Año final: 2016 <br></th>
+                </tr>
+                <tr>
+                    <th> BásicaSecundarios <br>Colegio Santiago De Las Atalayas <br>
+                        Ciudad:BOGOTA D.C <br>
+                        Año de Inicio: 2017 Año Final: 2022 <br></th>
+                    </tr>
+                    <tr>
+                        <th> Educación técnica <br> SENA <br>
+                            Ciudad: BOGOTA D.C <br>
+                            Año de Inicio: 2021 Año Final: 2022 <br></th>
+            </tr>
+            <tr>
+                <th>
+                    Educación superior <br> UNIVERSITARIA UNIAGUSTIANA <br>
+Ciudad: BOGOTA D.C <br>
+Año de Inicio: 2023 Año Final: Cursando
+                </th> <br>
+            </tr>
+        </tbody>
+        </table>
+        <hr>
+        <div class="expe">
+            <h3> experiencia laboral </h3>
+            <ul>
+                <li> auxiliar de ventas </li>
+                <li> auxiliar polivalente </li>
+                <li> construccion </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="refe">
+            <h3> referencias laborales </h3>
+            <ul>
+                <li>Esther Vargas <br>
+                    Ama de casa <br>
+                    3167619843 <br></li>
+                <li>Yolanda García <br>
+                    Ama de casa <br>
+                    3118775468 <br> </li>
+            </ul>
+        </div>
+        <footer> @Juan Ciacedo </footer>
+    </body>
+</html>
