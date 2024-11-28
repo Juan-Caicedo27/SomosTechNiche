@@ -13,7 +13,7 @@ form.addEventListener("submit", e => {
     let entrar = false; // Variable para determinar  errores 
 
     //  longitud del nombre
-    if (nombre.value.length < 6) {
+    if (nombre.value.length < 2) {
         warnings += "El nombre es muy corto\n"; // Añade advertencia si el nombre es demasiado corto
         entrar = true; // Indica  un error
     }
