@@ -37,7 +37,7 @@ function currentSlide(n) {
 function showSlides(n) {
     let i;
     let slides = document.querySelectorAll(".slider");
-    let quadrates = document.querySelectorAll(".quadrate"); 
+    let quadrates = document.querySelectorAll(".quadrate"); // Comillas corregidas
 
     if (n > slides.length) {
         slideIndex = 1;
@@ -47,12 +47,12 @@ function showSlides(n) {
     }
 
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
+        slides[i].style.display = "none"; // 
     }
 
-    for (i = 0; i < quadrates.length; i++) { 
-        quadrates[i].className = quadrates[i].className.replace(" active", ""); 
+    for (i = 0; i < quadrates.length; i++) { // 
+        quadrates[i].className = quadrates[i].className.replace(" active", ""); // 
+    }
 
-    slides[slideIndex - 1].style.display = "block"; 
+    slides[slideIndex - 1].style.display = "block"; // 
     quadrates[slideIndex - 1].className += " active";
-}
