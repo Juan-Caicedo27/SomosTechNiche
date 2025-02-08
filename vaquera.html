@@ -3,64 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atrapando animales en movimiento</title>
+    <title>Juego de Atrapar Vacas</title>
     <style>
-        /* Estilos básicos */
+        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            background-color: #F4E1D2;
         }
 
-        .container {
+        .game-container {
             position: relative;
-            width: 500px;
+            width: 600px;
             height: 400px;
-            background-color: #87CEEB;
-            border-radius: 8px;
+            background-color: #A3D8F4;
+            border: 2px solid #333;
             overflow: hidden;
         }
 
-        /* Animación del animal */
-        .animal {
+        /* La vaca */
+        .cow {
             position: absolute;
             width: 50px;
             height: 50px;
-            background-size: cover;
+            background-color: #FF6347;
+            border-radius: 50%;
             bottom: 30px;
-            animation: moveAnimal 5s linear infinite;
+            animation: moveCow 5s linear infinite;
         }
 
-        /* Movimiento del animal (de izquierda a derecha) */
-        @keyframes moveAnimal {
+        /* Animación para mover las vacas de izquierda a derecha */
+        @keyframes moveCow {
             0% {
                 left: -60px;
             }
             50% {
-                left: 220px;
+                left: 270px;
             }
             100% {
-                left: 500px;
+                left: 600px;
             }
         }
 
-        /* La cuerda */
+        /* Cuerda */
         .rope {
             position: absolute;
             width: 2px;
             height: 200px;
             background-color: #8B4513;
-            left: 240px;
+            left: 270px;
             top: 0;
-            transition: height 1s;
             display: none;
         }
 
-        /* El botón */
+        /* Contador de puntos */
+        .score {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Botón para lanzar la cuerda */
         button {
             position: absolute;
             bottom: 20px;
@@ -82,30 +93,58 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="animal" id="animal" style="background-image: url('https://placekitten.com/50/50');"></div>
+    <div class="game-container">
+        <div class="score" id="score">Puntos: 0</div>
+        <div class="cow" id="cow"></div>
         <div class="rope" id="rope"></div>
-        <button onclick="atraparAnimal()">Atrapar el animal</button>
+        <button onclick="lanzarCuerda()">Lanzar Cuerda</button>
     </div>
 
     <script>
-        // Función para animar la cuerda y atrapar al animal
-        function atraparAnimal() {
-            const animal = document.getElementById("animal");
-            const rope = document.getElementById("rope");
+        let puntos = 0;
+        let rope = document.getElementById('rope');
+        let cow = document.getElementById('cow');
+        let scoreDisplay = document.getElementById('score');
 
-            // Mostrar la cuerda y ajustar su altura
-            rope.style.display = "block";
-            rope.style.height = "350px"; // Alargamos la cuerda
+        // Función para lanzar la cuerda
+        function lanzarCuerda() {
+            // Mostramos la cuerda y la movemos
+            rope.style.display = 'block';
+            rope.style.top = '0px'; // Empieza desde la parte superior
+            rope.style.left = '270px'; // Centro horizontal
+            moveRope();
 
-            // Simulamos que la cuerda atrapa al animal moviéndola hacia él
+            // Verificamos si la cuerda toca la vaca
             setTimeout(() => {
-                animal.style.animation = "none"; // Detenemos el movimiento del animal
-                animal.style.left = "230px";  // Mover el animal a donde está la cuerda
-                animal.style.bottom = "300px"; // Baja el animal para simular que es atrapado
-            }, 1000); // La cuerda tarda 1 segundo en alcanzar al animal
+                if (rope.getBoundingClientRect().right >= cow.getBoundingClientRect().left &&
+                    rope.getBoundingClientRect().top <= cow.getBoundingClientRect().bottom) {
+                    puntos++;
+                    scoreDisplay.innerHTML = `Puntos: ${puntos}`;
+                    resetCuerda();
+                }
+            }, 300); // Revisa después de 0.3 segundos
+        }
+
+        // Función para mover la cuerda hacia abajo
+        function moveRope() {
+            let topPosition = 0;
+            let interval = setInterval(() => {
+                if (topPosition < 400) {
+                    topPosition += 5; // Mueve la cuerda hacia abajo
+                    rope.style.top = `${topPosition}px`;
+                } else {
+                    clearInterval(interval);
+                    resetCuerda();
+                }
+            }, 20); // Movimiento de la cuerda
+        }
+
+        // Función para reiniciar la cuerda después de lanzarla
+        function resetCuerda() {
+            rope.style.display = 'none';
         }
     </script>
 
 </body>
 </html>
+
