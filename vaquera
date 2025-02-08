@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapando animales en movimiento</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            background-color: #87CEEB;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Animación del animal */
+        .animal {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            bottom: 30px;
+            animation: moveAnimal 5s linear infinite;
+        }
+
+        /* Movimiento del animal (de izquierda a derecha) */
+        @keyframes moveAnimal {
+            0% {
+                left: -60px;
+            }
+            50% {
+                left: 220px;
+            }
+            100% {
+                left: 500px;
+            }
+        }
+
+        /* La cuerda */
+        .rope {
+            position: absolute;
+            width: 2px;
+            height: 200px;
+            background-color: #8B4513;
+            left: 240px;
+            top: 0;
+            transition: height 1s;
+            display: none;
+        }
+
+        /* El botón */
+        button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="animal" id="animal" style="background-image: url('https://placekitten.com/50/50');"></div>
+        <div class="rope" id="rope"></div>
+        <button onclick="atraparAnimal()">Atrapar el animal</button>
+    </div>
+
+    <script>
+        // Función para animar la cuerda y atrapar al animal
+        function atraparAnimal() {
+            const animal = document.getElementById("animal");
+            const rope = document.getElementById("rope");
+
+            // Mostrar la cuerda y ajustar su altura
+            rope.style.display = "block";
+            rope.style.height = "350px"; // Alargamos la cuerda
+
+            // Simulamos que la cuerda atrapa al animal moviéndola hacia él
+            setTimeout(() => {
+                animal.style.animation = "none"; // Detenemos el movimiento del animal
+                animal.style.left = "230px";  // Mover el animal a donde está la cuerda
+                animal.style.bottom = "300px"; // Baja el animal para simular que es atrapado
+            }, 1000); // La cuerda tarda 1 segundo en alcanzar al animal
+        }
+    </script>
+
+</body>
+</html>
